@@ -1,0 +1,29 @@
+<div>
+  <h2>Libros List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libros">
+        <td>{{libro.id}}</td>
+        <td>{{libro.titulo}}</td>
+        <td>{{libro.autor}}</td>
+        <td>{{libro.anioPublicacion}}</td>
+        <td>{{libro.genero}}</td>
+        <td>{{libro.genero}}</td>
+        <td>{{libro.descripcion}}</td>
+        <td>
+          <button (click)="deleteLibro(libro.id)">Delete</button>
+            <button [routerLink]="['/edit', libro.id]">Edit</button>
+          <button [routerLink]="['/view', libro.id]">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

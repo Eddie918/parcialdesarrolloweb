@@ -1,0 +1,11 @@
+<div>
+    <h2>Libro Form</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input type="text" id="title" [(ngModel)]="libro.title" name="title" required>
+      <label for="author">Author</label>
+      <input type="text" id="author" [(ngModel)]="libro.author" name="author" required>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+  
