@@ -1,0 +1,40 @@
+<h2>Editar Libro</h2>
+<form (ngSubmit)="updateBook()">
+  <div>
+    <label>Nombre:</label>
+    <input [(ngModel)]="book.nombre" name="nombre" required>
+  </div>
+  <div>
+    <label>Autor:</label>
+    <input [(ngModel)]="book.autor" name="autor" required>
+  </div>
+  <div>
+    <label>Fecha de Escritura:</label>
+    <input [(ngModel)]="book.fechaDeEscritura" name="fechaDeEscritura" type="date" required>
+  </div>
+  <div>
+    <label>Número de Edición:</label>
+    <input [(ngModel)]="book.numeroDeEdicion" name="numeroDeEdicion" type="number" min="1" required>
+  </div>
+  <div>
+    <label>Precio:</label>
+    <input [(ngModel)]="book.precio" name="precio" type="number" min="0.01" step="0.01" required>
+  </div>
+  <div>
+    <label>Tipo:</label>
+    <select [(ngModel)]="book.tipo" name="tipo" required>
+      <option value="Entretenimiento">Entretenimiento</option>
+      <option value="Pedagógico">Pedagógico</option>
+    </select>
+  </div>
+  <div>
+    <label>Fama Escritor:</label>
+    <select [(ngModel)]="book.famaEscritor" name="famaEscritor" required>
+      <option value="Alta">Alta</option>
+      <option value="Media">Media</option>
+      <option value="Baja">Baja</option>
+    </select>
+  </div>
+  <button type="submit">Actualizar</button>
+  <button type="button" (click)="navigate.emit('list')">Cancelar</button>
+</form>

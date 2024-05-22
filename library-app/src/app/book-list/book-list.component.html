@@ -1,0 +1,9 @@
+<div>
+    <button (click)="showComponent('list')">Lista de Libros</button>
+    <button (click)="showComponent('add')">Agregar Libro</button>
+  </div>
+  <app-book-list *ngIf="currentComponent === 'list'"></app-book-list>
+  <app-book-add *ngIf="currentComponent === 'add'"></app-book-add>
+  <app-book-edit *ngIf="currentComponent === 'edit'"></app-book-edit>
+  <app-book-delete *ngIf="currentComponent === 'delete'"></app-book-delete>
+  
